@@ -1,0 +1,15 @@
+{% extends 'library/layout.html' %}
+
+{% block body %}
+<div class="container py-5 d-flex align-items-center justify-content-center">
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        <input class='form-control mb-3 pe-5' name="username" type="text" placeholder="Username">
+        <input class='form-control mb-3' type="email" name="email" placeholder="Email">
+        <input class='form-control  mb-3' name="password" type="password" placeholder="Password">
+        <input class='form-control  mb-3' name="confirm_password" type="password" placeholder="Comfirm Password">
+        <input class="btn btn-dark px-5 mt-3" type="submit" value="Sign up">
+    </form>
+</div>
+
+{% endblock %}

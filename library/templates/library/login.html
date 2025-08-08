@@ -1,0 +1,12 @@
+{% extends 'library/layout.html' %}
+{% block body %}
+<div style="min-height: 50vh;" class="py-5 d-flex align-items-center justify-content-center">
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <input class='form-control form-control-lg mb-3' name="username" type="text" placeholder="Username">
+        <input class='form-control form-control-lg mb-3' name="password" type="password" placeholder="Password">
+        <input class="btn btn-dark fs-5 px-5 mt-3" type="submit" value="Log in">
+    </form>
+</div>
+
+{% endblock %}

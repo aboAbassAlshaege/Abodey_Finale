@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="shadow-lg p-3">
+    <header class="shadow p-3 rounded">
         <div class=" container d-flex flex-column flex-sm-row align-items-center justify-content-between">
             <div class="logo">
                 <img src="{% static 'library/images/logo.png' %}" alt="logo">
@@ -21,8 +21,8 @@
                 {% if user.is_authenticated %}
                 <li class="btn btn-outline-danger"><a href="" class="nav-link">Logout</a></li>
                 {% else %}
-                <li class="btn btn-outline-dark"><a href="" class="nav-link">Log in</a></li>
-                <li class="btn btn-outline-dark"><a href="" class="nav-link">Sign up</a></li>
+                <li class="btn btn-outline-dark"><a href="{% url 'login' %}" class="nav-link">Log in</a></li>
+                <li class="btn btn-outline-dark"><a href="{% url 'signup' %}" class="nav-link">Sign up</a></li>
                 {% endif %}
             </ul>
 
