@@ -19,7 +19,7 @@
             </div>
             <ul class="mt-3">
                 {% if user.is_authenticated %}
-                <li class="btn btn-outline-danger"><a href="" class="nav-link">Logout</a></li>
+                <li class="btn btn-outline-danger"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
                 {% else %}
                 <li class="btn btn-outline-dark"><a href="{% url 'login' %}" class="nav-link">Log in</a></li>
                 <li class="btn btn-outline-dark"><a href="{% url 'signup' %}" class="nav-link">Sign up</a></li>
