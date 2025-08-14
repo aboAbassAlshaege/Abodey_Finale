@@ -1,4 +1,10 @@
 {% extends 'library/layout.html' %}
 {% block body %}
-<h3>This is index</h3>
+<div class="container" id="search_engine">
+    <form action="" method="get" class="d-flex flex-column flex-sm-row justify-content-center align-items-center">
+        <input style="max-width: 500px; border-radius: 0;" placeholder="Type a book name ..."
+            class="form-control shadow m-2" type="search" aria-label="Search" />
+        <input class="btn btn-outline-dark px-3 shadow shadow" type="submit" value="Search">
+    </form>
+</div>
 {% endblock %}

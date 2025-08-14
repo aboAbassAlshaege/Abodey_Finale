@@ -3,6 +3,9 @@
 {% block body %}
 <div class="container py-5 d-flex align-items-center justify-content-center">
     <form action="{% url 'signup' %}" method="post">
+        {% if message %}
+        <p class="mb-3">{{ message }}</p>
+        {% endif %}
         {% csrf_token %}
         <input class='form-control mb-3 pe-5' name="username" type="text" placeholder="Username">
         <input class='form-control mb-3' type="email" name="email" placeholder="Email">

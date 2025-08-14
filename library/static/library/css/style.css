@@ -9,6 +9,26 @@
     }
 }
 
-.container_form {
-    background-color: brown;
+body {
+    position: relative;
+}
+
+#search_engine {
+    padding: 30px;
+}
+
+@media screen and (min-width: 740px) {
+    #search_engine {
+        padding: 60px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #search_engine {
+        padding: 100px;
+    }
+}
+
+.btn {
+    border-radius: 0 !important;
 }
