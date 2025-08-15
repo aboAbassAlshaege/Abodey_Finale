@@ -29,6 +29,19 @@ body {
     }
 }
 
+@media screen and (min-width: 740px) {
+    #search_input {
+        font-size: 25px;
+        padding-left: 20px;
+    }
+
+    #search_input+input {
+        font-size: 22px;
+    }
+}
+
+
+
 .btn {
     border-radius: 0 !important;
 }

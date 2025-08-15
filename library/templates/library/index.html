@@ -2,9 +2,25 @@
 {% block body %}
 <div class="container" id="search_engine">
     <form action="" method="get" class="d-flex flex-column flex-sm-row justify-content-center align-items-center">
-        <input style="max-width: 500px; border-radius: 0;" placeholder="Type a book name ..."
+        <input id="search_input" style="max-width: 500px; border-radius: 0;" placeholder="Type a book title ..."
             class="form-control shadow m-2" type="search" aria-label="Search" />
         <input class="btn btn-outline-dark px-3 shadow shadow" type="submit" value="Search">
     </form>
 </div>
+<script>
+    //################## API Client ############
+    document.querySelector("#search_engine > form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let search_form = new FormData();
+        search_form.append("title", document.getElementById("search_input").value.trim())
+        fetch('{% url "search" %}', {
+            method: "GET",
+            body: search_form
+        }).then(response => response.json())
+            .then(data => {
+                return
+            }).catch(error => { console.log("catch error:", error) })
+    })
+    //##########################################
+</script>
 {% endblock %}

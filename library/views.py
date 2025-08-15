@@ -6,6 +6,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 # Create your views here.
 
+def search(request):
+    return
+
 def index(request):
     return render(request, 'library/index.html')
 
